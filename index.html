@@ -10,30 +10,50 @@
 </head>
 
 <body>
+
     <header>
         <h1 style="text-align: center;">OMDb</h1>
     </header>
+
     <main>
 
-        <div id="log">
-            <a href="#" onClick="logInPopUp('login')" style="font-size: 18px;">Σύνδεση</a>
-            <a href="#" onClick="logInPopUp('login')" style="font-size: 18px;">Εγγραφή</a>
+        <div id="menu">
+            <a href="#" onClick="logInPopUp('login')">Σύνδεση</a>
+            <a href="#" onClick="signUpPopUp('signup')">Εγγραφή</a>
         </div>
 
         <div class="outer">
-            <input id="searchBar" style="font-family: CaviarDreams;" type="text" name="search" placeholder="Search..">
+            <input id="searchBar" style="font-family: CaviarDreams;" type="search" name="search" placeholder="Search..">
         </div>
 
-        <div class="popup">
+        <div class="login-popup">
             <div class="popup-content">
                 <img src="icons/cancelred.png" onClick="logInPopUp('cancel')" width="20px" height="20px" alt="Cancel"
                     class="cancel">
                 <p>Συνδεθείτε!</p>
                 <input type="email" placeholder="E-mail">
                 <input type="password" placeholder="Password"><br>
-                <a href="#" class="button">Login</a><br>
+                <a href="#" class="button" style="font-size: 20px;">Είσοδος</a><br><br>
 
                 <p style="font-size: 12px;">Δεν έχετε κάποιον λογαριασμό; Εγγραφείτε!</p>
+                <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');" style="font-size: 20px;">Εγγραφή</a><br>
+            </div>
+        </div>
+        
+        <div class="signup-popup">
+            <div class="popup-content">
+                <img src="icons/cancelred.png" onClick="signUpPopUp('cancel')" width="20px" height="20px" alt="Cancel"
+                    class="cancel">
+                <p>Εγγραφείτε!</p><br>
+                <p>Username</p>
+                <input type="text" placeholder="Username">
+                <p>E-mail</p>
+                <input type="email" placeholder="E-mail">
+                <p>Password</p>
+                <input type="password" placeholder="Password">
+                <p>Confirm Password</p>
+                <input type="password" placeholder="Password"><br>
+                <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');" style="font-size: 20px;">Εγγραφή</a><br>
             </div>
         </div>
 
@@ -41,6 +61,7 @@
     <footer>
 
     </footer>
+
 </body>
 
 </html>
