@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 h1, h2, h3, p {
@@ -127,7 +127,7 @@ input[type=password]:focus {
 .popup-content {
     height: auto;
     width: 20%;
-    background: white;
+    background: whitesmoke;
     padding: 20px;
     border-radius: 5px;
     position: relative;
@@ -149,7 +149,7 @@ input[type=password]:focus {
     font-size: large;
     border: none;
     outline: none;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 @media only screen and (max-width: 768px) {
@@ -162,6 +162,15 @@ input[type=password]:focus {
     
     .outer {
         width: 60%;
+    }
+
+    #menu {
+        text-align: center;
+    }
+
+    #menu a {
+        text-align: center;
+        padding: 0px 10px;
     }
 
 }
