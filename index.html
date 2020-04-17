@@ -11,9 +11,31 @@
 
 <body>
     <header>
-
+        <h1 style="text-align: center;">OMDb</h1>
     </header>
     <main>
+
+        <div id="log">
+            <a href="#" onClick="logInPopUp('login')" style="font-size: 18px;">Σύνδεση</a>
+            <a href="#" onClick="logInPopUp('login')" style="font-size: 18px;">Εγγραφή</a>
+        </div>
+
+        <div class="outer">
+            <input id="searchBar" style="font-family: CaviarDreams;" type="text" name="search" placeholder="Search..">
+        </div>
+
+        <div class="popup">
+            <div class="popup-content">
+                <img src="icons/cancelred.png" onClick="logInPopUp('cancel')" width="20px" height="20px" alt="Cancel"
+                    class="cancel">
+                <p>Συνδεθείτε!</p>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Password"><br>
+                <a href="#" class="button">Login</a><br>
+
+                <p style="font-size: 12px;">Δεν έχετε κάποιον λογαριασμό; Εγγραφείτε!</p>
+            </div>
+        </div>
 
     </main>
     <footer>
