@@ -12,8 +12,25 @@ body {
     background-color: whitesmoke;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, h4, p {
     font-family: CaviarDreams;
+}
+
+h3, h4 {
+    color: #931f1f;
+    text-align: left;
+}
+
+h3 {
+    white-space: nowrap;
+}
+
+h4 {
+    text-align: justify;
+}
+
+img {
+    float: left;
 }
 
 a {
@@ -29,11 +46,6 @@ a {
 
 a:hover {
     color: black;
-}
-
-#menu {
-    padding: 10px; 
-    padding-left: 20px;
 }
 
 
@@ -82,15 +94,12 @@ input[type=password]:focus {
     outline-color: #931f1f;
 }
     
-.outer {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.inner {
     border: 1.5px outset #931f1f;
+    width: 50%;
+    height: 100%;
     padding: 10px;
+    margin: auto;
 }
 
 
@@ -142,6 +151,78 @@ input[type=password]:focus {
     cursor: pointer;
 }
 
+.cancel:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.center {
+    padding: 2px 0;
+    margin-top: 100px;
+    border: none;
+}
+
+.res {
+    color: black;
+}
+
+.item11 { grid-area: title; }
+.item22 { grid-area: menu; }
+.item33 { grid-area: search; }
+.item44 { grid-area: results; }
+
+.grid-flex {
+	display: grid;
+	grid-template-areas:
+	'title'
+    'menu'
+	'search'
+	'results';
+	column-gap: 0px;
+	grid-template-columns: 1fr;
+}
+
+
+.item1 { grid-area: photo; }
+.item2 { grid-area: title; }
+.item3 { grid-area: release; }
+.item4 { grid-area: genre; }
+.item5 { grid-area: info; }
+
+.grid-container {
+    display: grid;
+    width: 50%;
+    height: 20%;
+    margin: auto;
+	grid-template-areas:
+	'photo title'
+    'photo release'
+	'photo genre'
+	'photo info';
+    column-gap: 1px;
+    row-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    overflow: auto;
+}
+
+#notFound {
+    opacity: 0;
+}
+
+#menu {
+    padding: 10px; 
+    padding-left: 20px;
+}
+
+#results {
+    display : none;
+}
 
 #searchBar {
     width: 100%;
@@ -153,15 +234,44 @@ input[type=password]:focus {
 }
 
 @media only screen and (max-width: 768px) {
-	/* For mobile phones: */
+    /* For mobile phones: */
+    
+    h3, h4 {
+        color: #931f1f;
+        white-space: wrap;
+        text-align: center;
+    }
+
+    .grid-container {
+        display: grid;
+        width: 100%;
+        margin: auto;
+        grid-template-areas:
+        'photo'
+        'title'
+        'release'
+        'genre'
+        'info';
+        column-gap: 0px;
+        grid-template-columns: 1fr;
+    }
+
+    .responsive {
+        max-width: 40%;
+        height: auto;
+        float: none;
+        padding: 0px;
+    }
+
     .popup-content {
         height: auto;
         width: 80%;
         
     }
-    
-    .outer {
-        width: 60%;
+
+    .center {
+        margin-top: 5px;
+        padding: 10px 0px;
     }
 
     #menu {
@@ -171,6 +281,12 @@ input[type=password]:focus {
     #menu a {
         text-align: center;
         padding: 0px 10px;
+    }
+
+    #src {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
