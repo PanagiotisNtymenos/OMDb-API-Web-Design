@@ -29,6 +29,14 @@ h4 {
     text-align: justify;
 }
 
+img {
+    max-width: 100%;
+}
+
+img:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
 
 a {
     font-family: CaviarDreams;
@@ -111,7 +119,6 @@ input[type=password]:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
     overflow: auto;
 }
 
@@ -126,7 +133,6 @@ input[type=password]:focus {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
     overflow: auto;
 }
 
@@ -157,7 +163,12 @@ input[type=password]:focus {
     max-width: 100%;
     height: auto;
     padding: 20px;
-    float: left;
+
+}
+
+.clear { 
+    clear: left;
+    display:block;
 }
 
 .center {
@@ -222,7 +233,7 @@ input[type=password]:focus {
 
 #src {
     width: 40%;
-    top: 0;
+    float: left;
 }
 
 #moreORless {
@@ -265,6 +276,7 @@ input[type=password]:focus {
 
     .container {
         width: 90%;
+        text-align: center;
     }
 
     .responsive {
@@ -292,6 +304,12 @@ input[type=password]:focus {
     #menu a {
         text-align: center;
         padding: 0px 10px;
+    }
+
+    #loginas {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #src {

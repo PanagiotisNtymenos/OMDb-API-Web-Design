@@ -22,7 +22,8 @@
             <div id="menu" class="item22">
                 <a href="#" onClick="logInPopUp('login')">Σύνδεση</a>
                 <a href="#" onClick="signUpPopUp('signup')">Εγγραφή</a>
-                <span style="float: right; font-family: CaviarDreams;">Συνδεδεμένος ως <span style="color: #931f1f;">Επισκέπτης</span></span>
+                <span id="loginas" style="float: right; font-family: CaviarDreams;"><span
+                        style="color: #931f1f;">Επισκέπτης</span></span>
             </div>
 
             <div class="center">
@@ -36,35 +37,37 @@
             </div>
             <div id="results" class="item44" style="margin-top: 20px;">
                 <div class="container">
-
                     <div style="margin: auto;">
-                        <img id="src" src="" alt="Poster" class="responsive">
-                        <br>
-                        <a href="#"><img id="bookmark" onClick="bookmark()" src="icons/notAdded.png" alt="Bookmark"
-                                width="30px" height="30px"></a>
-                        <br>
-                        <h3>Title: <span class="res" id="title"></span></h3>
-                        <h4>Released: <span class="res" id="release"></span></h4>
-                        <h4>Genre: <span class="res" id="genre"></span></h4>
-                        <h4>Rating: <span class="res" id="imdbRating"></span></h4><br>
-                        <div id="sl">
-                            <img id="moreORless" src="icons/more.png" alt="More Info" width="30px" height="30px">
-                            <a id="show" href="#" onClick="showInfo()" style="font-size: small;">More
-                                Information</a>
+                        <div id="preview">
+                            <img id="src" src="" alt="Poster" class="responsive">
+                            <br>
+                            <a href="#"><img id="bookmark" onClick="bookmark()" src="icons/notAdded.png" alt="Bookmark"
+                                    width="30px" height="30px"></a>
+                            <br>
+                            <h3>Title: <span class="res" id="title"></span></h3>
+                            <h4>Released: <span class="res" id="release"></span></h4>
+                            <h4>Genre: <span class="res" id="genre"></span></h4>
+                            <h4>Rating: <span class="res" id="imdbRating"></span></h4><br>
+                            <div id="sl">
+                                <img id="moreORless" src="icons/more.png" alt="More Info" width="30px" height="30px">
+                                <a id="show" href="#" onClick="showInfo()" style="font-size: small;">More
+                                    Information</a><br><br>
+                            </div>
                         </div>
-
-                        <div id="moreinf">
-                            <h3>Information</h3>
-                            <h4>Plot: <span class="res" id="plot"></span></h4>
-                            <h4>Rated: <span class="res" id="rated"></span></h4>
-                            <h4>Duration: <span class="res" id="runtime"></span></h4>
-                            <h4>Director: <span class="res" id="director"></span></h4>
-                            <h4>Writer: <span class="res" id="writer"></span></h4>
-                            <h4>Actors: <span class="res" id="actors"></span></h4>
-                            <h4>Awards: <span class="res" id="awards"></span></h4>
-                            <h4>Language: <span class="res" id="language"></span></h4>
-                            <h4>Production: <span class="res" id="production"></span></h4>
-                        </div>
+                        <span class="clear">
+                            <div id="moreinf">
+                                <h3>Information</h3>
+                                <h4>Plot: <span class="res" id="plot"></span></h4>
+                                <h4>Rated: <span class="res" id="rated"></span></h4>
+                                <h4>Duration: <span class="res" id="runtime"></span></h4>
+                                <h4>Director: <span class="res" id="director"></span></h4>
+                                <h4>Writer: <span class="res" id="writer"></span></h4>
+                                <h4>Actors: <span class="res" id="actors"></span></h4>
+                                <h4>Awards: <span class="res" id="awards"></span></h4>
+                                <h4>Language: <span class="res" id="language"></span></h4>
+                                <h4>Production: <span class="res" id="production"></span></h4>
+                            </div>
+                        </span>
                     </div>
 
                 </div>
