@@ -22,7 +22,7 @@ function OMDbAPICall(title) {
     var title = result.Title;
     var release = result.Year;
     var genre = result.Genre;
-    var plot = result.Plot;
+    var score = result.imdbRating;
     if (response == "False") {
       if (!$("#searchBar").val()) {
         document.querySelector("#notFound").style.opacity = "0";
@@ -43,7 +43,28 @@ function OMDbAPICall(title) {
       document.querySelector("#title").innerHTML = title;
       document.querySelector("#release").innerHTML = release;
       document.querySelector("#genre").innerHTML = genre;
+      document.querySelector("#imdbRating").innerHTML = score;
+
+      var plot = result.Plot;
+      var rated = result.Rated;
+      var duration = result.Runtime;
+      var director = result.Director;
+      var writer = result.Writer;
+      var actors = result.Actors;
+      var awards = result.Awards;
+      var language = result.Language;
+      var production = result.Production;
+
       document.querySelector("#plot").innerHTML = plot;
+      document.querySelector("#rated").innerHTML = rated;
+      document.querySelector("#runtime").innerHTML = duration;
+      document.querySelector("#director").innerHTML = director;
+      document.querySelector("#writer").innerHTML = writer;
+      document.querySelector("#actors").innerHTML = actors;
+      document.querySelector("#awards").innerHTML = awards;
+      document.querySelector("#language").innerHTML = language;
+      document.querySelector("#production").innerHTML = production;
+
     }
   });
 
@@ -51,10 +72,34 @@ function OMDbAPICall(title) {
 
 $(document).ready(function () {
   $("#searchBar").keyup(function (e) {
-
     OMDbAPICall($("#searchBar").val());
-    console.log($("#searchBar").val());
+    if (document.querySelector("#moreinf").style.display == "inline-block") {
+      document.querySelector("#moreinf").style.display = "none";
+      $('#moreORless').attr('src', "icons/more.png");
+      document.querySelector("#show").innerHTML = "More Information";
+    }
   });
 });
 
 
+function bookmark() {
+  if ((document.getElementById("bookmark").src).includes("icons/added.png")) {
+    $('#bookmark').attr('src', "icons/notAdded.png");
+  } else {
+    $('#bookmark').attr('src', "icons/added.png");
+  }
+}
+
+function showInfo() {
+
+  if (document.querySelector("#moreinf").style.display == "inline-block") {
+    document.querySelector("#moreinf").style.display = "none";
+    $('#moreORless').attr('src', "icons/more.png");
+    document.querySelector("#show").innerHTML = "More Information";
+  } else {
+    document.querySelector("#moreinf").style.display = "inline-block";
+    $('#moreORless').attr('src', "icons/less.png");
+    document.querySelector("#show").innerHTML = "Less Information";
+  }
+
+}

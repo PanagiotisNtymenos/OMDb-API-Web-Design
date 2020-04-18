@@ -29,9 +29,6 @@ h4 {
     text-align: justify;
 }
 
-img {
-    float: left;
-}
 
 a {
     font-family: CaviarDreams;
@@ -160,6 +157,7 @@ input[type=password]:focus {
     max-width: 100%;
     height: auto;
     padding: 20px;
+    float: left;
 }
 
 .center {
@@ -178,7 +176,8 @@ input[type=password]:focus {
 .item44 { grid-area: results; }
 
 .grid-flex {
-	display: grid;
+    display: grid;
+    margin: 0;
 	grid-template-areas:
 	'title'
     'menu'
@@ -189,26 +188,21 @@ input[type=password]:focus {
 }
 
 
-.item1 { grid-area: photo; }
-.item2 { grid-area: title; }
-.item3 { grid-area: release; }
-.item4 { grid-area: genre; }
-.item5 { grid-area: info; }
+.item1 { 
+    grid-area: photo; 
+}
+.item2 { 
+    grid-area: info; 
+    display: block;
+    padding-right: 20px;
+}
 
-.grid-container {
-    display: grid;
-    width: 50%;
-    height: 20%;
+
+.container {
+    display: block;
+    width: 40%;
     margin: auto;
-	grid-template-areas:
-	'photo title'
-    'photo release'
-	'photo genre'
-	'photo info';
-    column-gap: 1px;
-    row-gap: 0px;
-    grid-template-columns: 1fr 1fr;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #notFound {
@@ -216,12 +210,29 @@ input[type=password]:focus {
 }
 
 #menu {
+    font-size: large;
     padding: 10px; 
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 #results {
     display : none;
+}
+
+#src {
+    width: 40%;
+    top: 0;
+}
+
+#moreORless {
+    float:left;
+}
+
+
+#moreinf {
+    display : none;
+    flex-direction: column;
 }
 
 #searchBar {
@@ -233,6 +244,16 @@ input[type=password]:focus {
     background-color: whitesmoke;
 }
 
+#bookmark {
+    display: block;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+#foot {
+    bottom: 0;
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     
@@ -242,22 +263,12 @@ input[type=password]:focus {
         text-align: center;
     }
 
-    .grid-container {
-        display: grid;
-        width: 100%;
-        margin: auto;
-        grid-template-areas:
-        'photo'
-        'title'
-        'release'
-        'genre'
-        'info';
-        column-gap: 0px;
-        grid-template-columns: 1fr;
+    .container {
+        width: 90%;
     }
 
     .responsive {
-        max-width: 40%;
+        max-width: 100%;
         height: auto;
         float: none;
         padding: 0px;
@@ -284,9 +295,23 @@ input[type=password]:focus {
     }
 
     #src {
+        width: 60%;
+        float: none;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
 
+    #sl {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #bookmark {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
