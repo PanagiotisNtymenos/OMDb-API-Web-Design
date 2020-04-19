@@ -33,11 +33,6 @@ img {
     max-width: 100%;
 }
 
-img:hover {
-    transform: scale(1.01);
-    transition: 0.3s ease-in-out;
-}
-
 a {
     font-family: CaviarDreams;
     text-decoration: none;
@@ -236,6 +231,11 @@ input[type=password]:focus {
     float: left;
 }
 
+#src:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
+
 #moreORless {
     float:left;
 }
@@ -256,9 +256,16 @@ input[type=password]:focus {
 }
 
 #bookmark {
+    width: 5%;
     display: block;
     margin-left: auto;
     margin-right: 20px;
+}
+
+
+#bookmark:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
 }
 
 #foot {
