@@ -157,8 +157,6 @@ input[type=password]:focus {
 .responsive {
     max-width: 100%;
     height: auto;
-    padding: 20px;
-
 }
 
 .clear { 
@@ -174,6 +172,11 @@ input[type=password]:focus {
 
 .res {
     color: black;
+}
+
+.flex-container {
+    display: flex;
+    white-space: nowrap;
 }
 
 .item11 { grid-area: title; }
@@ -228,10 +231,22 @@ input[type=password]:focus {
 
 #src {
     width: 40%;
+    height: auto;
+    padding-right: 20px;
+    float: left;
+}
+
+#srcBookmark {
+    width: 10%;
     float: left;
 }
 
 #src:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
+
+#srcBookmark:hover {
     transform: scale(1.01);
     transition: 0.3s ease-in-out;
 }
@@ -256,10 +271,10 @@ input[type=password]:focus {
 }
 
 #bookmark {
-    width: 5%;
+    width: 40px;
     display: block;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: auto;
 }
 
 
@@ -270,6 +285,10 @@ input[type=password]:focus {
 
 #foot {
     bottom: 0;
+}
+
+#info {
+    float: left;
 }
 
 @media only screen and (max-width: 768px) {
@@ -320,6 +339,16 @@ input[type=password]:focus {
     }
 
     #src {
+        max-width: 60%;
+        height: auto;
+        float: none;
+        display: block;
+        padding-right: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #srcBookmark {
         width: 60%;
         float: none;
         display: block;
@@ -335,8 +364,13 @@ input[type=password]:focus {
     }
 
     #bookmark {
-        display: block;
+        width: 30px;
         margin-left: auto;
         margin-right: auto;
     }
+
+    #info {
+        float: none;
+    }
+    
 }

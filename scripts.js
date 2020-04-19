@@ -35,7 +35,7 @@ function OMDbAPICall(title) {
       if (poster !== "N/A") {
         $('#src').attr('src', poster);
       } else {
-        $('#src').attr('src', "icons/404.png");
+        $('#src').attr('src', "icons/404v2.png");
       }
       document.querySelector("#notFound").innerHTML = "Αποτέλεσμα...";
       document.querySelector("#notFound").style.opacity = "1";
@@ -133,7 +133,8 @@ function createBookmarks() {
       var say;
 
       img.src = poster;
-      img.style = "float: left; width: 20%; height: auto; padding-right: 20px;"
+      img.id = "srcBookmark"
+      img.style = "height: auto; padding-right: 20px;"
 
       span.style = "padding: 20px;";
       span.className = "clear";

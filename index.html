@@ -22,7 +22,7 @@
             <div id="menu" class="item22">
                 <a href="#" onClick="logInPopUp('login')">Σύνδεση</a>
                 <a href="#" onClick="signUpPopUp('signup')">Εγγραφή</a>
-                <span id="loginas" style="float: right; font-family: CaviarDreams;"><span
+                <span id="loginas" style="float: right; font-family: CaviarDreams;">Συνδεδεμένος ως <span
                         style="color: #931f1f;">Επισκέπτης</span></span>
             </div>
 
@@ -38,20 +38,26 @@
             <div id="results" class="item44" style="margin-top: 20px;">
                 <div class="container">
                     <div style="margin: auto;">
-                        <div id="preview">
-                            <img id="src" src="" alt="Poster" class="responsive">
-                            
-                            <a href="#" style="text-align: right;"><img id="bookmark" onClick="bookmark()" src="icons/notAdded.png"
-                                    alt="Bookmark" style="float: right;"></a>
-                            <br>
-                            <h3>Title: <span class="res" id="title"></span></h3>
-                            <h4>Released: <span class="res" id="release"></span></h4>
-                            <h4>Genre: <span class="res" id="genre"></span></h4>
-                            <h4>Rating: <span class="res" id="imdbRating"></span></h4><br>
-                            <div id="sl">
-                                <img id="moreORless" src="icons/more.png" alt="More Info" width="20px" height="20px">
-                                <a id="show" href="#" onClick="showInfo()" style="font-size: small;">More
-                                    Information</a><br><br>
+                        <div id="preview" style="overflow: hidden;">
+                            <div>
+                                <img id="src" src="icons/404.png" alt="Poster" class="responsive">
+                            </div>
+                            <div id="info">
+                                <h3>Title: <span class="res" id="title"></span></h3>
+                                <h4>Released: <span class="res" id="release"></span></h4>
+                                <h4>Genre: <span class="res" id="genre"></span></h4>
+                                <h4>Rating: <span class="res" id="imdbRating"></span></h4><br>
+                                <div id="sl">
+                                    <img id="moreORless" src="icons/more.png" alt="More Info" width="20px"
+                                        height="20px">
+                                    <a id="show" href="#" onClick="showInfo()" style="font-size: small;">More
+                                        Information</a><br><br>
+                                </div>
+
+                            </div>
+                            <div>
+                                <a href="#"><img id="bookmark" onClick="bookmark()" src="icons/notAdded.png"
+                                        alt="Bookmark"></a>
                             </div>
                         </div>
                         <span class="clear">
