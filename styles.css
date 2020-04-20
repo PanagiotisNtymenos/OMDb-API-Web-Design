@@ -8,8 +8,19 @@
 	src: url(fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf);
 }
 
+
 body {
     background-color: whitesmoke;
+    margin: 0;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;  
+    white-space: nowrap;
 }
 
 h1, h2, h3, h4, p {
@@ -214,6 +225,11 @@ input[type=password]:focus {
     overflow: hidden;
 }
 
+#myBody {
+    position: relative;
+    min-height: 99vh;
+  }
+
 #notFound {
     opacity: 0;
 }
@@ -223,6 +239,11 @@ input[type=password]:focus {
     padding: 10px; 
     padding-left: 20px;
     padding-right: 20px;
+}
+
+#loginas {
+    float: right; 
+    font-family: CaviarDreams;
 }
 
 #results {
@@ -277,14 +298,21 @@ input[type=password]:focus {
     margin-right: auto;
 }
 
-
-#bookmark:hover {
-    transform: scale(1.3);
-    transition: 0.3s ease-in-out;
+#toBookmarks {
+    padding: 0px 0px;
+    font-size: 18px;
+    transition: 0.2s;
 }
 
+
+/* #bookmark:hover {
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
+} */
+
 #foot {
-    bottom: 0;
+    color: #931f1f;
+    font-size: small;
 }
 
 #info {
@@ -328,15 +356,19 @@ input[type=password]:focus {
     }
 
     #menu a {
-        text-align: center;
         padding: 0px 10px;
     }
 
+    #menu span {
+        padding: 15px 0px;
+    }
+
     #loginas {
+        float: none; 
         display: block;
         margin-left: auto;
         margin-right: auto;
-    }
+    } 
 
     #src {
         max-width: 60%;
@@ -354,6 +386,10 @@ input[type=password]:focus {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #moreORless {
+        float: none;
     }
 
     #sl {

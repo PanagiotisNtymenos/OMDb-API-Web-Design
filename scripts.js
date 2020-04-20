@@ -87,9 +87,11 @@ function bookmark() {
   if ((document.getElementById("bookmark").src).includes("icons/added.png")) {
     $('#bookmark').attr('src', "icons/notAdded.png");
     document.getElementById("bookmark").style.transform = 'scale(1)';
+    document.getElementById("bookmark:hover").style.transform = 'scale(1)';
   } else {
     $('#bookmark').attr('src', "icons/added.png");
     document.getElementById("bookmark").style.transform = 'scale(1.3)';
+    document.getElementById("bookmark").style.transition = '0.2s ease-in-out';
   }
 }
 
@@ -108,9 +110,10 @@ function showInfo() {
 }
 
 function createBookmarks() {
-  $.getJSON('http://www.omdbapi.com/?apikey=274dad1c&t=' + encodeURI('Guardians of the galaxy')).then(function (result) {
+  for (i = 0; i < 5; i++) {
+    $.getJSON('http://www.omdbapi.com/?apikey=274dad1c&t=' + encodeURI('Guardians of the galaxy')).then(function (result) {
 
-    for (i = 0; i < 5; i++) {
+
 
       var poster = result.Poster;
       var title = result.Title;
@@ -164,6 +167,7 @@ function createBookmarks() {
 
       document.body.appendChild(span);
       console.log(span);
-    }
-  });
+
+    });
+  }
 }

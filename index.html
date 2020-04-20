@@ -12,111 +12,123 @@
 </head>
 
 <body>
-    <div class="grid-flex">
-        <header>
-            <h1 class="item11" style="text-align: center;">OMD<span style="color: #931f1f">b</span></h1>
-        </header>
+    <div id="myBody">
+        <div class="grid-flex">
+            <header>
+                <h1 class="item11" style="text-align: center;">OMD<span style="color: #931f1f">b</span></h1>
+            </header>
 
-        <main>
+            <main>
 
-            <div id="menu" class="item22">
-                <a href="#" onClick="logInPopUp('login')">Σύνδεση</a>
-                <a href="#" onClick="signUpPopUp('signup')">Εγγραφή</a>
-                <span id="loginas" style="float: right; font-family: CaviarDreams;">Συνδεδεμένος ως <span
-                        style="color: #931f1f;">Επισκέπτης</span></span>
-            </div>
-
-            <div class="center">
-                <div class="inner item33">
-                    <input id="searchBar" style="font-family: CaviarDreams;" type="search" name="search"
-                        placeholder="Search..">
+                <div id="menu" class="item22" style="overflow: hidden;">
+                    <a href="#" onClick="logInPopUp('login')">Σύνδεση</a>
+                    <a href="#" onClick="signUpPopUp('signup')">Εγγραφή</a>
+                    <span id="loginas">Συνδεδεμένος ως <a id="toBookmarks" href="bookmarks.html"><span
+                                style="color: #931f1f;">Επισκέπτης</span></a></span>
                 </div>
-                <span style="text-align: center;">
-                    <p id="notFound">Κανένα αποτέλεσμα :(</p>
-                </span>
-            </div>
-            <div id="results" class="item44" style="margin-top: 20px;">
-                <div class="container">
-                    <div style="margin: auto;">
-                        <div id="preview" style="overflow: hidden;">
-                            <div>
-                                <img id="src" src="icons/404.png" alt="Poster" class="responsive">
-                            </div>
-                            <div id="info">
-                                <h3>Title: <span class="res" id="title"></span></h3>
-                                <h4>Released: <span class="res" id="release"></span></h4>
-                                <h4>Genre: <span class="res" id="genre"></span></h4>
-                                <h4>Rating: <span class="res" id="imdbRating"></span></h4><br>
-                                <div id="sl">
-                                    <img id="moreORless" src="icons/more.png" alt="More Info" width="20px"
-                                        height="20px">
-                                    <a id="show" href="#" onClick="showInfo()" style="font-size: small;">More
-                                        Information</a><br><br>
+
+                <div class="center">
+                    <div class="inner item33">
+                        <input id="searchBar" style="font-family: CaviarDreams;" type="search" name="search"
+                            placeholder="Search..">
+                    </div>
+                    <span style="text-align: center;">
+                        <p id="notFound">Κανένα αποτέλεσμα :(</p>
+                    </span>
+                </div>
+                <div id="results" class="item44" style="margin-top: 20px;">
+                    <div class="container">
+                        <div style="margin: auto;">
+                            <div id="preview" style="overflow: hidden;">
+                                <div>
+                                    <img id="src" src="icons/404.png" alt="Poster" class="responsive">
+                                </div>
+
+                                <div id="info">
+
+                                    <h3>Title: <span class="res" id="title"></span></h3>
+                                    <h4>Released: <span class="res" id="release"></span></h4>
+                                    <h4>Genre: <span class="res" id="genre"></span></h4>
+                                    <h4>Rating: <span class="res" id="imdbRating"></span></h4><br>
+                                    <div id="sl">
+                                        <a id="show" href="#" onClick="showInfo()"
+                                            style="font-size: small; white-space: nowrap;">More
+                                            Information</a>
+                                        <img id="moreORless" src="icons/more.png" alt="More Info" width="20px"
+                                            height="20px">
+                                        <br><br>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <a href="#"><img id="bookmark" onClick="bookmark()" src="icons/notAdded.png"
+                                            alt="Bookmark"></a>
                                 </div>
 
                             </div>
-                            <div>
-                                <a href="#"><img id="bookmark" onClick="bookmark()" src="icons/notAdded.png"
-                                        alt="Bookmark"></a>
-                            </div>
+
+                            <span class="clear">
+                                <div id="moreinf">
+                                    <h3>More Information</h3>
+                                    <h4>Plot: <span class="res" id="plot"></span></h4>
+                                    <h4>Rated: <span class="res" id="rated"></span></h4>
+                                    <h4>Duration: <span class="res" id="runtime"></span></h4>
+                                    <h4>Director: <span class="res" id="director"></span></h4>
+                                    <h4>Writer: <span class="res" id="writer"></span></h4>
+                                    <h4>Actors: <span class="res" id="actors"></span></h4>
+                                    <h4>Awards: <span class="res" id="awards"></span></h4>
+                                    <h4>Language: <span class="res" id="language"></span></h4>
+                                    <h4>Production: <span class="res" id="production"></span></h4>
+                                </div>
+                            </span>
                         </div>
-                        <span class="clear">
-                            <div id="moreinf">
-                                <h3>More Information</h3>
-                                <h4>Plot: <span class="res" id="plot"></span></h4>
-                                <h4>Rated: <span class="res" id="rated"></span></h4>
-                                <h4>Duration: <span class="res" id="runtime"></span></h4>
-                                <h4>Director: <span class="res" id="director"></span></h4>
-                                <h4>Writer: <span class="res" id="writer"></span></h4>
-                                <h4>Actors: <span class="res" id="actors"></span></h4>
-                                <h4>Awards: <span class="res" id="awards"></span></h4>
-                                <h4>Language: <span class="res" id="language"></span></h4>
-                                <h4>Production: <span class="res" id="production"></span></h4>
-                            </div>
-                        </span>
+
                     </div>
-
                 </div>
-            </div>
 
-            <div class="login-popup">
-                <div class="popup-content">
-                    <img src="icons/cancelred.png" onClick="logInPopUp('cancel')" width="20px" height="20px"
-                        alt="Cancel" class="cancel">
-                    <p>Συνδεθείτε!</p>
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Password"><br>
-                    <a href="#" class="button" style="font-size: 20px;">Είσοδος</a><br><br>
+                <div class="login-popup">
+                    <div class="popup-content">
+                        <img src="icons/cancelred.png" onClick="logInPopUp('cancel')" width="20px" height="20px"
+                            alt="Cancel" class="cancel">
+                        <p style="font-size: large;">Συνδεθείτε!</p>
+                        <input type="email" placeholder="E-mail">
+                        <input type="password" placeholder="Password"><br>
+                        <a href="#" class="button" style="font-size: 20px;">Είσοδος</a><br><br>
 
-                    <p style="font-size: 12px;">Δεν έχετε κάποιον λογαριασμό; Εγγραφείτε!</p>
-                    <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');"
-                        style="font-size: 20px;">Εγγραφή</a><br>
+                        <p style="font-size: 12px;">Δεν έχετε κάποιον λογαριασμό;
+                            <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');" style="font-size: 15px;">
+                                Εγγραφείτε!</a></p><br>
+                    </div>
                 </div>
-            </div>
 
-            <div class="signup-popup">
-                <div class="popup-content">
-                    <img src="icons/cancelred.png" onClick="signUpPopUp('cancel')" width="20px" height="20px"
-                        alt="Cancel" class="cancel">
-                    <p>Εγγραφείτε!</p><br>
-                    <p>Username</p>
-                    <input type="text" placeholder="Username">
-                    <p>E-mail</p>
-                    <input type="email" placeholder="E-mail">
-                    <p>Password</p>
-                    <input type="password" placeholder="Password">
-                    <p>Confirm Password</p>
-                    <input type="password" placeholder="Password"><br>
-                    <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');"
-                        style="font-size: 20px;">Εγγραφή</a><br>
+                <div class="signup-popup">
+                    <div class="popup-content">
+                        <img src="icons/cancelred.png" onClick="signUpPopUp('cancel')" width="20px" height="20px"
+                            alt="Cancel" class="cancel">
+                        <p style="font-size: large;">Εγγραφείτε!</p><br>
+                        <p>Username</p>
+                        <input type="text" placeholder="Username">
+                        <p>E-mail</p>
+                        <input type="email" placeholder="E-mail">
+                        <p>Password</p>
+                        <input type="password" placeholder="Password">
+                        <p>Confirm Password</p>
+                        <input type="password" placeholder="Password"><br>
+                        <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');"
+                            style="font-size: 20px;">Εγγραφή</a><br><br>
+
+                        <p style="font-size: 12px;">Έχετε ήδη κάποιον λογαριασμό;
+                            <a href="#" onClick="logInPopUp('login'); signUpPopUp('cancel');" style="font-size: 15px;">
+                                Συνδεθείτε!</a></p><br>
+                    </div>
                 </div>
-            </div>
 
-        </main>
+            </main>
+        </div><br><br><br>
+        <footer>
+            <p id="foot" style="text-align: center;">Panayots 2020 &#169;</p>
+        </footer>
     </div>
-    <footer>
-        <!-- <p id="foot" style="text-align:center;font-size:50%; color: #931f1f;">Panayots 2020 &#169;</p> -->
-    </footer>
 </body>
 
 </html>
