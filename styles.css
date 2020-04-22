@@ -319,6 +319,17 @@ input[type=password]:focus {
     float: left;
 }
 
+
+@media only screen and (max-width: 1200px) {
+    /* For smaller screens: */
+
+    .popup-content {
+        height: auto;
+        width: 50%;
+        
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     
