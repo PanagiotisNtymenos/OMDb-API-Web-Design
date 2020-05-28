@@ -10,7 +10,13 @@
 	http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
-	
+
+	<mvc:annotation-driven />
+	<mvc:resources location="/resources/static/"
+		mapping="/resources/static/**" />
+
 	<ctx:annotation-config></ctx:annotation-config>
-	<ctx:component-scan base-package="com.omdb"></ctx:component-scan>
+	<ctx:component-scan
+		base-package="com.omdb.controllers"></ctx:component-scan>
+
 </beans>

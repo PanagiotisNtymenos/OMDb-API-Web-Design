@@ -91,7 +91,7 @@ input[type=email]:focus {
 
 input[type=password] {
     font-family: CaviarDreams;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     text-decoration-color: #931f1f;
     width: 50%;
     height: 25px;

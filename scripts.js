@@ -6,6 +6,11 @@ function logInPopUp(TODO) {
   }
 }
 
+var xmlhttp;
+function init() {
+  xmlhttp = new XMLHttpRequest();
+}
+
 function signUpPopUp(TODO) {
   if (TODO == 'signup') {
     document.querySelector(".signup-popup").style.display = "flex";
@@ -15,9 +20,11 @@ function signUpPopUp(TODO) {
 }
 
 function OMDbAPICall(title) {
+
   $.getJSON('http://www.omdbapi.com/?apikey=274dad1c&t=' + encodeURI(title)).then(function (result) {
+
     var response = result.Response;
-    console.log(result);
+
     var poster = result.Poster;
     var title = result.Title;
     var release = result.Year;
@@ -66,6 +73,7 @@ function OMDbAPICall(title) {
       document.querySelector("#production").innerHTML = production;
 
     }
+
   });
 
 }
@@ -170,4 +178,18 @@ function createBookmarks() {
 
     });
   }
+}
+
+var loginForm = $('#login_form');
+var loginSubmit = $('#submit_login');
+
+loginSubmit.on('click', function () {
+  myForm.toggle();
+  myForm.is(":visible") ? $(this).html('hide') : $(this).html('show');
+});
+
+function callLogin(email, password) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "email=" + email + "&pass=" + password, true);
+  xhttp.send();
 }

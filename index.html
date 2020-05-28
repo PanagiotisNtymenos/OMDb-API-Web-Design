@@ -9,6 +9,13 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="scripts.js"></script>
     <title>OMDb</title>
+    <script>
+        $(document).ready(function () {
+            $('#loginGO').click(function () {
+                callLogin($('#email').val(), $('#password').val());
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -91,10 +98,11 @@
                         <img src="icons/cancelred.png" onClick="logInPopUp('cancel')" width="20px" height="20px"
                             alt="Cancel" class="cancel">
                         <p style="font-size: large;">Συνδεθείτε!</p>
-                        <input type="email" placeholder="E-mail">
-                        <input type="password" placeholder="Password"><br>
-                        <a href="#" class="button" style="font-size: 20px;">Είσοδος</a><br><br>
-
+                        <form id='login_form' action="login" method="POST">
+                            <input type="email" id="email" placeholder="E-mail">
+                            <input type="password" id="password" placeholder="Password"><br>
+                            <a type="submit" id="loginGO" onclick="callLogin();" href="#" class="button" style="font-size: 20px;">Είσοδος</a><br><br>
+                        </form>
                         <p style="font-size: 12px;">Δεν έχετε κάποιον λογαριασμό;
                             <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');" style="font-size: 15px;">
                                 Εγγραφείτε!</a></p><br>
@@ -106,17 +114,14 @@
                         <img src="icons/cancelred.png" onClick="signUpPopUp('cancel')" width="20px" height="20px"
                             alt="Cancel" class="cancel">
                         <p style="font-size: large;">Εγγραφείτε!</p><br>
-                        <p>Username</p>
-                        <input type="text" placeholder="Username">
-                        <p>E-mail</p>
-                        <input type="email" placeholder="E-mail">
-                        <p>Password</p>
-                        <input type="password" placeholder="Password">
-                        <p>Confirm Password</p>
-                        <input type="password" placeholder="Password"><br>
-                        <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');"
-                            style="font-size: 20px;">Εγγραφή</a><br><br>
-
+                        <form action="">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="E-mail">
+                            <input type="password" placeholder="Password">
+                            <input type="password" placeholder="Confirm password"><br>
+                            <a href="#" onClick="signUpPopUp('signup'); logInPopUp('cancel');"
+                                style="font-size: 20px;">Εγγραφή</a><br><br>
+                        </form>
                         <p style="font-size: 12px;">Έχετε ήδη κάποιον λογαριασμό;
                             <a href="#" onClick="logInPopUp('login'); signUpPopUp('cancel');" style="font-size: 15px;">
                                 Συνδεθείτε!</a></p><br>
