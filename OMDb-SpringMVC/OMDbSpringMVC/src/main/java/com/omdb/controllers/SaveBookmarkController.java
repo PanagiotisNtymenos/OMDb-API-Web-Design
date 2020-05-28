@@ -51,5 +51,18 @@ public class SaveBookmarkController {
 
 		return titles;
 	}
+	
+	@RequestMapping("/searchBookmark")
+	@ResponseBody
+	public String searchBookmark(@RequestParam String username, @RequestParam String movieID) {
+
+		SaveService ss = new SaveService();
+
+		if (ss.exists(username, movieID)) {
+			return "Delete !";
+		} else {
+			return "Save !";
+		}
+	}
 
 }

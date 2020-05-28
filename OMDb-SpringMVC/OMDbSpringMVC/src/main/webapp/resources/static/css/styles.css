@@ -8,416 +8,396 @@
 	src: url(fonts/Caviar-Dreams/Caviar_Dreams_Bold.ttf);
 }
 
-
 body {
-    background-color: whitesmoke;
-    margin: 0;
+	background-color: whitesmoke;
+	margin: 0;
 }
 
-
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;  
-    white-space: nowrap;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+	white-space: nowrap;
 }
 
 h1, h2, h3, h4, p {
-    font-family: CaviarDreams;
+	font-family: CaviarDreams;
 }
 
 h3, h4 {
-    color: #931f1f;
-    text-align: left;
+	color: #931f1f;
+	text-align: left;
 }
 
 h3 {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 h4 {
-    text-align: justify;
+	text-align: justify;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 a {
-    font-family: CaviarDreams;
-    text-decoration: none;
-    color: #931f1f;
-    border: none;
-    padding: 5px 15px;
-    text-align: center;
-    font-size: 18px;
-    transition: 0.2s;
+	font-family: CaviarDreams;
+	text-decoration: none;
+	font-weight: bold;
+	border: none;
+	padding: 5px 15px;
+	text-align: center;
+	font-size: 18px;
+	transition: 0.2s;
 }
 
 a:hover {
-    color: black;
+	color: black;
 }
 
-
 input[type=text] {
-    font-family: CaviarDreams;
-    margin-bottom: 15px;
-    width: 50%;
-    height: 25px;
-    font-size: medium;
-    padding: 8px;
-    border: 1px solid gray;
+	font-family: CaviarDreams;
+	margin-bottom: 15px;
+	width: 50%;
+	height: 25px;
+	font-size: medium;
+	padding: 8px;
+	border: 1px solid gray;
 }
 
 input[type=text]:focus {
-    outline-color: #931f1f;
+	outline-color: #931f1f;
 }
 
-
 input[type=email] {
-    font-family: CaviarDreams;
-    margin-bottom: 15px;
-    width: 50%;
-    height: 25px;
-    font-size: medium;
-    padding: 8px;
-    border: 1px solid gray;
+	font-family: CaviarDreams;
+	margin-bottom: 15px;
+	width: 50%;
+	height: 25px;
+	font-size: medium;
+	padding: 8px;
+	border: 1px solid gray;
 }
 
 input[type=email]:focus {
-    outline-color: #931f1f;
+	outline-color: #931f1f;
 }
 
 input[type=password] {
-    font-family: CaviarDreams;
-    margin-bottom: 15px;
-    text-decoration-color: #931f1f;
-    width: 50%;
-    height: 25px;
-    font-size: medium;
-    padding: 8px;
-    color: #931f1f;
-    border: 1px solid gray;
+	font-family: CaviarDreams;
+	margin-bottom: 15px;
+	text-decoration-color: #931f1f;
+	width: 50%;
+	height: 25px;
+	font-size: medium;
+	padding: 8px;
+	color: #931f1f;
+	border: 1px solid gray;
 }
 
 input[type=password]:focus {
-    outline-color: #931f1f;
-}
-    
-.inner {
-    border: 1.5px outset #931f1f;
-    width: 50%;
-    height: 100%;
-    padding: 10px;
-    margin: auto;
+	outline-color: #931f1f;
 }
 
+.inner {
+	border: 1.5px outset #931f1f;
+	width: 50%;
+	height: 100%;
+	padding: 10px;
+	margin: auto;
+}
 
 .login-popup {
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: auto;
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: auto;
 }
 
 .signup-popup {
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: auto;
+	background: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	overflow: auto;
 }
 
 .popup-content {
-    height: auto;
-    width: 20%;
-    background: whitesmoke;
-    padding: 20px;
-    border-radius: 5px;
-    position: relative;
-    display: block;
-    overflow: auto;
+	height: auto;
+	width: 20%;
+	background: whitesmoke;
+	padding: 20px;
+	border-radius: 5px;
+	position: relative;
+	display: block;
+	overflow: auto;
 }
 
 .cancel {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    cursor: pointer;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	cursor: pointer;
 }
 
 .cancel:hover {
-    transform: scale(1.1);
-    transition: 0.2s ease;
+	transform: scale(1.1);
+	transition: 0.2s ease;
 }
 
 .responsive {
-    max-width: 100%;
-    height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
-.clear { 
-    clear: left;
-    display:block;
+.clear {
+	clear: left;
+	display: block;
 }
 
 .center {
-    padding: 2px 0;
-    margin-top: 100px;
-    border: none;
+	padding: 2px 0;
+	margin-top: 100px;
+	border: none;
 }
 
 .res {
-    color: black;
+	color: black;
 }
 
 .flex-container {
-    display: flex;
-    white-space: nowrap;
+	display: flex;
+	white-space: nowrap;
 }
 
-.item11 { grid-area: title; }
-.item22 { grid-area: menu; }
-.item33 { grid-area: search; }
-.item44 { grid-area: results; }
+.item11 {
+	grid-area: title;
+}
+
+.item22 {
+	grid-area: menu;
+}
+
+.item33 {
+	grid-area: search;
+}
+
+.item44 {
+	grid-area: results;
+}
 
 .grid-flex {
-    display: grid;
-    margin: 0;
-	grid-template-areas:
-	'title'
-    'menu'
-	'search'
-	'results';
+	display: grid;
+	margin: 0;
+	grid-template-areas: 'title' 'menu' 'search' 'results';
 	column-gap: 0px;
 	grid-template-columns: 1fr;
 }
 
-
-.item1 { 
-    grid-area: photo; 
-}
-.item2 { 
-    grid-area: info; 
-    display: block;
-    padding-right: 20px;
+.item1 {
+	grid-area: photo;
 }
 
+.item2 {
+	grid-area: info;
+	display: block;
+	padding-right: 20px;
+}
 
 .container {
-    display: block;
-    width: 40%;
-    margin: auto;
-    overflow: hidden;
+	display: block;
+	width: 40%;
+	margin: auto;
+	overflow: hidden;
 }
 
 #myBody {
-    position: relative;
-    min-height: 99vh;
-  }
+	position: relative;
+	min-height: 99vh;
+}
 
 #notFound {
-    opacity: 0;
+	opacity: 0;
 }
 
 #menu {
-    font-size: large;
-    padding: 10px; 
-    padding-left: 20px;
-    padding-right: 20px;
+	font-size: large;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #loginas {
-    float: right; 
-    font-family: CaviarDreams;
+	float: right;
+	font-family: CaviarDreams;
 }
 
 #results {
-    display : none;
+	display: none;
 }
 
 #src {
-    width: 40%;
-    height: auto;
-    padding-right: 20px;
-    float: left;
-}
-
-#srcBookmark {
-    width: 10%;
-    float: left;
+	width: 40%;
+	height: auto;
+	padding-right: 20px;
+	float: left;
 }
 
 #src:hover {
-    transform: scale(1.01);
-    transition: 0.3s ease-in-out;
+	transform: scale(1.01);
+	transition: 0.3s ease-in-out;
 }
 
 #srcBookmark:hover {
-    transform: scale(1.01);
-    transition: 0.3s ease-in-out;
+	transform: scale(1.01);
+	transition: 0.3s ease-in-out;
 }
 
 #moreORless {
-    float:left;
+	float: left;
 }
 
-
 #moreinf {
-    display : none;
-    flex-direction: column;
+	display: none;
+	flex-direction: column;
 }
 
 #searchBar {
-    width: 100%;
-    height: 25px;
-    font-size: large;
-    border: none;
-    outline: none;
-    background-color: whitesmoke;
+	width: 100%;
+	height: 25px;
+	font-size: large;
+	border: none;
+	outline: none;
+	background-color: whitesmoke;
+}
+
+#srcBookmark {
+	width: 15%;
+	float: left;
+	padding-right: 20px;
 }
 
 #bookmark {
-    width: 40px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+	width: 40px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #toBookmarks {
-    padding: 0px 0px;
-    font-size: 18px;
-    transition: 0.2s;
+	padding: 0px 0px;
+	font-size: 18px;
+	transition: 0.2s;
 }
-
 
 /* #bookmark:hover {
     transform: scale(1.3);
     transition: 0.3s ease-in-out;
 } */
-
 #foot {
-    color: #931f1f;
-    font-size: small;
+	color: #931f1f;
+	font-size: small;
 }
 
 #info {
-    float: left;
+	float: left;
 }
 
-
 @media only screen and (max-width: 1200px) {
-    /* For smaller screens: */
-
-    .popup-content {
-        height: auto;
-        width: 50%;
-        
-    }
+	/* For smaller screens: */
+	.popup-content {
+		height: auto;
+		width: 50%;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    
-    h3, h4 {
-        color: #931f1f;
-        white-space: wrap;
-        text-align: center;
-    }
-
-    .container {
-        width: 90%;
-        text-align: center;
-    }
-
-    .responsive {
-        max-width: 100%;
-        height: auto;
-        float: none;
-        padding: 0px;
-    }
-
-    .popup-content {
-        height: auto;
-        width: 80%;
-        
-    }
-
-    .center {
-        margin-top: 5px;
-        padding: 10px 0px;
-    }
-
-    #menu {
-        text-align: center;
-    }
-
-    #menu a {
-        padding: 0px 10px;
-    }
-
-    #menu span {
-        padding: 15px 0px;
-    }
-
-    #loginas {
-        float: none; 
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    } 
-
-    #src {
-        max-width: 60%;
-        height: auto;
-        float: none;
-        display: block;
-        padding-right: 0px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #srcBookmark {
-        width: 60%;
-        float: none;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #moreORless {
-        float: none;
-    }
-
-    #sl {
-        width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #bookmark {
-        width: 30px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #info {
-        float: none;
-    }
-    
+	/* For mobile phones: */
+	h3, h4 {
+		color: #931f1f;
+		white-space: wrap;
+		text-align: center;
+	}
+	.container {
+		width: 90%;
+		text-align: center;
+	}
+	.responsive {
+		max-width: 100%;
+		height: auto;
+		float: none;
+		padding: 0px;
+	}
+	.popup-content {
+		height: auto;
+		width: 80%;
+	}
+	.center {
+		margin-top: 5px;
+		padding: 10px 0px;
+	}
+	#menu {
+		text-align: center;
+	}
+	#menu a {
+		padding: 0px 10px;
+	}
+	#menu span {
+		padding: 15px 0px;
+	}
+	#loginas {
+		float: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#src {
+		max-width: 60%;
+		height: auto;
+		float: none;
+		display: block;
+		padding-right: 0px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#srcBookmark {
+		width: 60%;
+		float: none;
+		display: block;
+		padding-right: 0px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#moreORless {
+		float: none;
+	}
+	#sl {
+		width: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#bookmark {
+		width: 30px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#info {
+		float: none;
+	}
 }

@@ -78,7 +78,7 @@ public class SignupService {
 
 			return true;
 		} catch (SQLException e) {
-			System.out.println("Same e-mail address!");
+			System.out.println("Same username!");
 			return false;
 		}
 

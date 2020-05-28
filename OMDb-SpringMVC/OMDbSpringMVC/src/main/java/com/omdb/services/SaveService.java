@@ -23,7 +23,7 @@ public class SaveService {
 			System.err.print("null connection!");
 		}
 	}
-	
+
 	public ArrayList<String> getMovies(String username) {
 
 		PreparedStatement pr = null;
@@ -38,11 +38,11 @@ public class SaveService {
 			rs = pr.executeQuery();
 
 			ArrayList<String> movies = new ArrayList<String>();
-			
-			while(rs.next()){
+
+			while (rs.next()) {
 				movies.add(rs.getString("title"));
 			}
-			
+
 			try {
 				pr.close();
 				rs.close();
@@ -70,7 +70,7 @@ public class SaveService {
 				st = this.connection.createStatement();
 
 				st.executeUpdate(sql);
-				
+
 				try {
 					st.close();
 				} catch (SQLException e) {
@@ -82,8 +82,55 @@ public class SaveService {
 				return false;
 			}
 		} else {
-			
-//			TODO Delete Bookmark
+
+			String sql = "DELETE FROM Bookmarks WHERE username = '" + username + "' AND title = '" + movieTitle + "';";
+
+			try {
+
+				st = this.connection.createStatement();
+
+				st.executeUpdate(sql);
+
+				try {
+					st.close();
+				} catch (SQLException e) {
+					System.out.println("OK something went incredibly wrong!");
+				}
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+
+			}
+			return true;
+		}
+	}
+
+	public boolean exists(String username, String movieID) {
+
+		PreparedStatement pr = null;
+		ResultSet rs = null;
+
+		String sql = "SELECT username FROM Bookmarks WHERE username = '" + username + "' and title = '" + movieID + "'";
+
+		try {
+
+			pr = this.connection.prepareStatement(sql);
+
+			rs = pr.executeQuery();
+
+			rs.getString("username");
+
+			try {
+				pr.close();
+				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				System.out.println("OK something went incredibly wrong!");
+				return false;
+			}
+			return true;
+		} catch (SQLException e) {
+
 			return false;
 		}
 	}
@@ -103,7 +150,7 @@ public class SaveService {
 			rs = pr.executeQuery();
 
 			rs.getString("username");
-			
+
 			try {
 				pr.close();
 				rs.close();
