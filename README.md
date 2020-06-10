@@ -1,4 +1,4 @@
-# OMDb-API-Web-Design
+# ![Alt][1] OMDb-API-Web-Design
 
 ## About  
 This project is a movie search engine, done as an assignment for the AUEB University, using [OMDb API](http://www.omdbapi.com/).  
@@ -8,3 +8,6 @@ The site has four functions:
 * Create Account  
 * Login/Logout  
 * Save/Delete Bookmakrs  
+
+
+[1]: /wp-smaller.png "Title"
