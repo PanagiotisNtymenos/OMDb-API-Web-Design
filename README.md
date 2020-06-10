@@ -1,4 +1,5 @@
-# ![Alt][1] OMDb-API-Web-Design
+![OMDb Logo](/src/main/resources/static/images/iconcircle.png) 
+# OMDb-API-Web-Design
 
 ## About  
 This project is a movie search engine, done as an assignment for the AUEB University, using [OMDb API](http://www.omdbapi.com/).  
@@ -8,6 +9,3 @@ The site has four functions:
 * Create Account  
 * Login/Logout  
 * Save/Delete Bookmakrs  
-
-
-[1]: /src/main/resources/static/images/iconcircle.png "Title"
