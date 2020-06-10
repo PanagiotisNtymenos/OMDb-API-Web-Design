@@ -10,4 +10,4 @@ The site has four functions:
 * Save/Delete Bookmakrs  
 
 
-[1]: /wp-smaller.png "Title"
+[1]: /src/main/resources/static/images/iconcircle.png "Title"
