@@ -2,7 +2,7 @@
 # OMDb API Web Page
   
 This is a movie search site, utilized as an assignment for the AUEB University. 
-With some basic knowlegde of HTML/Javascript/CSS I created the frontend which is a search bar and a bookmark collection.
+With some basic knowlegde of HTML/JavaScript/CSS I created the frontend which is a search bar and a bookmark collection.
   
 ## About
 This project uses the [OMDb API](http://www.omdbapi.com/) for getting movies and their information.   
