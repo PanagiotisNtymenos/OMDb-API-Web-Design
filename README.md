@@ -1,5 +1,5 @@
 ![OMDB Logo](SpringBootMVC/src/main/resources/static/images/iconcircle.png) 
-# OMDb API Web Design
+# OMDb API Web Page
   
 This is a movie search site, utilized as an assignment for the AUEB University. 
 With some basic knowlegde of HTML/Javascript/CSS I created the frontend which is a search bar and a bookmark collection.
