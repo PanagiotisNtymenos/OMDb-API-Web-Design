@@ -1,9 +1,11 @@
-[![OMDB Logo](SpringBootMVC/src/main/resources/static/images/iconcircle.png)](http://aueb-omdb.herokuapp.com/)
+[![OMDB Logo](SpringBootMVC/src/main/resources/static/images/iconcircle.png)](http://aueb-omdb.herokuapp.com/)  
+[Go to Site!!](http://aueb-omdb.herokuapp.com/)  
+  
 # OMDb API Web Page
   
 This is a movie search site, utilized as an assignment for the AUEB University. 
 With some basic knowlegde of HTML/JavaScript/CSS I created the frontend which is a search bar and a bookmark collection.
-[Go There!!](http://aueb-omdb.herokuapp.com/)
+
   
 ## About
 This project uses the [OMDb API](http://www.omdbapi.com/) for getting movies and their information.   
