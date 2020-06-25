@@ -12,6 +12,6 @@ The site has four functions:
   * Search Movies  
   * Create Account  
   * Login/Logout  
-  * Save/Delete Bookmakrs  
+  * Save/Delete Bookmarks  
 
-The transactions between the frontend and the backend are achieved using a REST API made by myself!
+The transactions between the frontend and the backend are achieved using a REST API I made myself!
