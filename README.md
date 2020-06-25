@@ -1,4 +1,4 @@
-![OMDB Logo](SpringBootMVC/src/main/resources/static/images/iconcircle.png) 
+[![OMDB Logo](SpringBootMVC/src/main/resources/static/images/iconcircle.png)](http://aueb-omdb.herokuapp.com/)
 # OMDb API Web Page
   
 This is a movie search site, utilized as an assignment for the AUEB University. 
