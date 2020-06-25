@@ -4,7 +4,7 @@
 			
 				document.getElementById("bookmarks_found").innerHTML = moviesList.length + " Bookmarks found!";
 				for (i = 0; i < moviesList.length; i++) {
-					$.getJSON('http://www.omdbapi.com/?apikey=274dad1c&i=' + encodeURI(moviesList[i])).then(function (result) {
+					$.getJSON('https://www.omdbapi.com/?apikey=274dad1c&i=' + encodeURI(moviesList[i])).then(function (result) {
 
 						var poster = result.Poster;
 						var title = result.Title;

@@ -2,7 +2,7 @@
 		var movieID;
 
 		function OMDbAPICall(title) {
-			$.getJSON('http://www.omdbapi.com/?apikey=274dad1c&s=' + encodeURI(title))
+			$.getJSON('https://www.omdbapi.com/?apikey=274dad1c&s=' + encodeURI(title))
 				.then(
 					function (result) {
 
@@ -107,7 +107,7 @@
 				document.querySelector("#moreinf" + id).style.display = "inline-block";
 				document.querySelector("#show" + id).innerHTML = "Less Information";
 
-				$.getJSON('http://www.omdbapi.com/?apikey=274dad1c&i=' + encodeURI(id)).then(function (result) {
+				$.getJSON('https://www.omdbapi.com/?apikey=274dad1c&i=' + encodeURI(id)).then(function (result) {
 
 					var response = result.Response;
 					var poster = result.Poster;
