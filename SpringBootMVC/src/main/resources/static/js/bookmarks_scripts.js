@@ -1,5 +1,4 @@
-
-		function showBookmarks(moviesList) {
+function showBookmarks(moviesList) {
 			if (moviesList != null) {
 			
 				document.getElementById("bookmarks_found").innerHTML = moviesList.length + " Bookmarks found!";

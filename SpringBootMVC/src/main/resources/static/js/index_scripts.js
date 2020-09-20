@@ -25,7 +25,7 @@
 								movieID = result.imdbID;
 
 
-								var resultToAdd = '<div id="preview' + movieID + '" style="overflow: hidden;"><div><img id="src' + movieID + '" src="resources/static/images/404.png" style="width: 40%;height: auto;padding-right: 20px;float: left;" alt="Poster" class="responsive"></div><div style="white-space: normal;" id="info' + movieID + '"><h3>Title: <span class="res" style="white-space: normal;" id="title' + movieID + '"></span></h3><h4>Released: <span class="res" id="release' + movieID + '"></span></h4><br><div id="sl"><a id="show' + movieID + '" href="#!" onClick="showInfo(' + "'" + movieID + "'" + ')"style="font-size: small; white-space: nowrap;">More Information</a> <br> <br>	</div><div><a id="bookmark_save' + movieID + '" href="#!" onClick="bookmark(' + "'" + movieID + "'" + '); handleBookmark(' + "'" + movieID + "'" + ');"><strong>Add to Bookmarks !</strong></a></div></div></div>';
+								var resultToAdd = '<div id="preview' + movieID + '" style="overflow: hidden;"><div><img id="src' + movieID + '" src="images/404v2.png" style="width: 40%;height: auto;padding-right: 20px;float: left;" alt="Poster" class="responsive"></div><div style="white-space: normal;" id="info' + movieID + '"><h3>Title: <span class="res" style="white-space: normal;" id="title' + movieID + '"></span></h3><h4>Released: <span class="res" id="release' + movieID + '"></span></h4><br><div id="sl"><a id="show' + movieID + '" href="#!" onClick="showInfo(' + "'" + movieID + "'" + ')"style="font-size: small; white-space: nowrap;">More Information</a> <br> <br>	</div><div><a id="bookmark_save' + movieID + '" href="#!" onClick="bookmark(' + "'" + movieID + "'" + '); handleBookmark(' + "'" + movieID + "'" + ');"><strong>Add to Bookmarks !</strong></a></div></div></div>';
 								var infoToAdd = '<span class="clear"><div id="moreinf' + movieID + '" style="display: none;"><h3>More Information</h3><h4>Genre: <span class="res" id="genre' + movieID + '"></span></h4><h4>Rating: <span class="res" id="imdbRating' + movieID + '"></span></h4><h4>Plot: <span class="res" id="plot' + movieID + '"></span></h4><h4>Rated: <span class="res" id="rated' + movieID + '"></span></h4><h4>Duration: <span class="res" id="runtime' + movieID + '"></span></h4><h4>Director: <span class="res" id="director' + movieID + '"></span></h4><h4>Writer: <span class="res" id="writer' + movieID + '"></span></h4><h4>Actors: <span class="res" id="actors' + movieID + '"></span></h4><h4>Awards: <span class="res" id="awards' + movieID + '"></span></h4><h4>Language: <span class="res" id="language' + movieID + '"></span></h4><h4>Production: <span class="res" id="production' + movieID + '"></span></h4></div></span>';
 
 								document.getElementById("movies").innerHTML = document.getElementById("movies").innerHTML + resultToAdd + infoToAdd + "<br><br> <br><br>";
@@ -62,11 +62,13 @@
 										for (i = 0; i < response.Search.length; i++) {
 											result = response.Search[i];
 											movieID = result.imdbID;
-											if (bookmarksList.includes(movieID)) {
-												document.getElementById("bookmark_save" + movieID).innerHTML = "<strong>Delete from Bookmarks !</strong>";
-											} else {
-												document.getElementById("bookmark_save" + movieID).innerHTML = "<strong>Add to Bookmarks !</strong>";
-											}
+											try{
+												if (bookmarksList.includes(movieID)) {
+													document.getElementById("bookmark_save" + movieID).innerHTML = "<strong>Delete from Bookmarks !</strong>";
+												} else {
+													document.getElementById("bookmark_save" + movieID).innerHTML = "<strong>Add to Bookmarks !</strong>";
+												}
+											} catch(err){}
 										}
 									}
 								});
@@ -127,7 +129,7 @@
 						if (poster !== "N/A") {
 							$('#src' + id).attr('src', poster);
 						} else {
-							$('#src' + id).attr('src', "resources/static/images/404v2.png");
+							$('#src' + id).attr('src', "images/404v2.png");
 						}
 
 						var plot = result.Plot;
