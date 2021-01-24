@@ -9,7 +9,7 @@ Finally, the site is up and running without the Tomcat (for testing purposes). Y
   
 ## About
 This project uses the [OMDb API](http://www.omdbapi.com/) for fetching movies and their information.   
-The backend is a JAVA [Spring Boot](https://spring.io) project, running on localhost using Tomcat.  
+The backend is a JAVA [Spring Boot](https://spring.io) app, running on localhost using Tomcat.  
 The Database is a plain local [SQLite](https://www.sqlite.org/index.html) file using SQL Queries to fetch/store data.  
 The site has four functions:  
   * Search Movies  
