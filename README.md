@@ -3,7 +3,7 @@
   
 # OMDb API Web Page
   
-This is a movie search site, utilized as an assignment for the AUEB University. 
+This is a movie search site, utilized as an assignment for AUEB. 
 With some basic knowlegde of HTML/JavaScript/CSS I created the frontend which is a search bar and a bookmark collection.
 
   
