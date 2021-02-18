@@ -1,5 +1,6 @@
 [![OMDB Logo](SpringBootMVC/src/main/resources/static/images/iconcircle.png)](https://omdbaueb.herokuapp.com/index.html)  
-[Go to Site!!](https://omdbaueb.herokuapp.com/index.html)  
+
+## [Go to Site!!](https://omdbaueb.herokuapp.com/index.html)  
   
 # OMDb API Web Page
   
