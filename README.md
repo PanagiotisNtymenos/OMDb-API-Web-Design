@@ -2,7 +2,7 @@
 
 ## [Go to Site!!](https://omdbaueb.herokuapp.com/index.html)  
   
-# OMDb API Web Page
+# OMDb API Web App
   
 This is a movie search site, utilized as an assignment for AUEB. 
 With some basic knowlegde of HTML/JavaScript/CSS I created the frontend which is a search bar and a bookmark collection.
